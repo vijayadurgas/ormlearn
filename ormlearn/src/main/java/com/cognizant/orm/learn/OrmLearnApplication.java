@@ -40,7 +40,7 @@ public class OrmLearnApplication {
 	public static void testAddCountry() {
     
 		LOGGER.info("Start add");
-		Country country = new Country("cs", "cognizant");
+		Country country = new Country("SI", "SOUTH INDIA");
 		countryService.addCountry(country);
 		LOGGER.info("End add");
 	}
