@@ -9,11 +9,12 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+@Entity(name = "country")
 @Data
-@AllArgsConstructor
-@Entity
-@Table(name = "country")
 @NoArgsConstructor
+@AllArgsConstructor
+@Table(name = "country", schema = "ormlearn")
+
 public class Country {
 
 	@Id
