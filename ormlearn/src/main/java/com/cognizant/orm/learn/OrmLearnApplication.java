@@ -71,7 +71,7 @@ public class OrmLearnApplication {
 
 	public static void main(String[] args) throws CountryNotFoundException {
     
-    ApplicationContext context = SpringApplication.run(OrmLearnApplication.class, args);
+    		ApplicationContext context = SpringApplication.run(OrmLearnApplication.class, args);
 		countryService = context.getBean(CountryService.class);
 		LOGGER.info("Inside main");
 		testGetAllCountries();
@@ -79,7 +79,7 @@ public class OrmLearnApplication {
 		testAddCountry();
 		getAllCountriesTest("AS");
 		testUpdateCountry("SI", "SOUTH INDIA");
-    testFindCountry("SI");
+    		testFindCountry("SI");
 		testDeleteCountry("SI");
 
 
