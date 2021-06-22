@@ -11,6 +11,6 @@ import com.cognizant.orm.learn.model.Country;
 public interface CountryRepository extends JpaRepository<Country, String> {
   
   @Query("select c from country c where c.name like %?1% order by name")
-  public List<Country> findByCountryWith(String text);
+  public List<Country> findCountryBy(String text);
 
 }
