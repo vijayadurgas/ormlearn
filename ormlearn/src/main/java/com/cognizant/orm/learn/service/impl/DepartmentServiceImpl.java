@@ -4,7 +4,7 @@ import javax.transaction.Transactional;
 
 import com.cognizant.orm.learn.model.Department;
 import com.cognizant.orm.learn.repository.DepartmentRepository;
-import com.cognizant.orm.learn.services.DepartmentService;
+import com.cognizant.orm.learn.service.DepartmentService;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -24,7 +24,7 @@ public class DepartmentServiceImpl implements DepartmentService {
 	public Department getById(int id) 
   {
     
-		LOGGER.info("DepartmentService Start get by ID");
+		LOGGER.info("DepartmentService get by ID");
 		return departmentRepository.findById(id).get();
     
 	}
@@ -33,9 +33,9 @@ public class DepartmentServiceImpl implements DepartmentService {
 	public void save(Department department)
   {
 
-		LOGGER.info("save method in DepartmentService Start");
+		LOGGER.info("DepartmentService Start save");
 		departmentRepository.save(department);
-		LOGGER.info("save method in DepartmentService End");
+		LOGGER.info("DepartmentService End save");
 
 	}
 }
