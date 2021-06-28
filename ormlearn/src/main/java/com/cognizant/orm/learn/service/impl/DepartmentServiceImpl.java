@@ -1,4 +1,4 @@
-package com.cognizant.orm.learn.services.impl;
+package com.cognizant.orm.learn.service.impl;
 
 import javax.transaction.Transactional;
 
