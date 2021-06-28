@@ -22,7 +22,7 @@ public class DepartmentServiceImpl implements DepartmentService {
 
 	@Transactional
 	public Department getById(int id) 
-  {
+       {
     
 		LOGGER.info("DepartmentService get by ID");
 		return departmentRepository.findById(id).get();
@@ -31,7 +31,7 @@ public class DepartmentServiceImpl implements DepartmentService {
 
 	@Transactional
 	public void save(Department department)
-  {
+        {
 
 		LOGGER.info("DepartmentService Start save");
 		departmentRepository.save(department);
