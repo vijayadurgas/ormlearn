@@ -1,4 +1,4 @@
-package com.cognizant.ormlearn;
+package com.cognizant.orm.learn;
 
 import java.math.BigDecimal;
 import java.util.Date;
@@ -10,12 +10,12 @@ import com.cognizant.orm.learn.model.Country;
 import com.cognizant.orm.learn.service.CountryService;
 import com.cognizant.springlearn.service.exception.CountryNotFoundException; 
 
-import com.cognizant.ormlearnformapping.model.Department;
-import com.cognizant.ormlearnformapping.model.Employee;
-import com.cognizant.ormlearnformapping.model.Skill;
-import com.cognizant.ormlearnformapping.services.DepartmentService;
-import com.cognizant.ormlearnformapping.services.EmployeeService;
-import com.cognizant.ormlearnformapping.services.SkillService;
+import com.cognizant.orm.learn.model.Department;
+import com.cognizant.orm.learn.model.Employee;
+import com.cognizant.orm.learn.model.Skill;
+import com.cognizant.orm.learn.service.DepartmentService;
+import com.cognizant.orm.learn.service.EmployeeService;
+import com.cognizant.orm.learn.service.SkillService;
 
 import java.util.List;
 
@@ -44,7 +44,7 @@ public class OrmLearnApplication {
 
 		LOGGER.info("Start getAll");
 		Country country = countryService.findCountryByCode(code);
-		LOGGER.debug("Country:{}", country);
+		LOGGER.debug("Country={}", country);
 		LOGGER.info("End getAll");
 
 	}
