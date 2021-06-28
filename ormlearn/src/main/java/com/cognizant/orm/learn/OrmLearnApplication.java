@@ -13,9 +13,11 @@ import com.cognizant.springlearn.service.exception.CountryNotFoundException;
 import com.cognizant.orm.learn.model.Department;
 import com.cognizant.orm.learn.model.Employee;
 import com.cognizant.orm.learn.model.Skill;
+import com.cognizant.orm.learn.model.Stock;
 import com.cognizant.orm.learn.service.DepartmentService;
 import com.cognizant.orm.learn.service.EmployeeService;
 import com.cognizant.orm.learn.service.SkillService;
+import com.cognizant.orm.learn.service.StockService;
 
 import java.util.List;
 
@@ -30,6 +32,7 @@ public class OrmLearnApplication {
 	private static EmployeeService employeeService;
 	private static DepartmentService departmentService;
 	private static SkillService skillService;
+	private static StockService stockService;
 
 	private static void testGetAllCountries() {
 
@@ -154,6 +157,22 @@ public class OrmLearnApplication {
 		LOGGER.info("End AverageSalary");
 	}
 	
+	
+	private static void testGetAllStockDetails() {
+
+		LOGGER.info("Start getAllStockDetails");
+		stockService.getAllStockDetails().forEach(c -> LOGGER.info("{}", c));
+		LOGGER.info("End getAllStockDetails");
+		
+	}
+	private static void testFindStockUsingCode() {
+		
+		LOGGER.info("Start findStockUsingCode");
+		stockService.findStockUsingCode("GOOGLE").forEach(c -> LOGGER.info("{}", c));
+		LOGGER.info("End findStockUsingCode");
+	
+	}
+
 	private static void usingNative(){
 		
 		LOGGER.info("Start usingNative");
@@ -161,7 +180,6 @@ public class OrmLearnApplication {
 		LOGGER.debug("{}", allEmployeesNative);
 		LOGGER.info("End usingNative");
 	}
-
 	public static void main(String[] args) throws CountryNotFoundException {
     
     		ApplicationContext context = SpringApplication.run(OrmLearnApplication.class, args);
@@ -169,6 +187,7 @@ public class OrmLearnApplication {
 		employeeService = context.getBean(EmployeeService.class);
 		departmentService = context.getBean(DepartmentService.class);
 		skillService = context.getBean(SkillService.class);
+		stockService = context.getBean(StockService.class);
 		LOGGER.info("Inside main");
 		testGetAllCountries();
 		getAllCountriesTest("IN");
@@ -185,6 +204,8 @@ public class OrmLearnApplication {
 		// getAllPermanent();
 		// getAverageSalary();
 		// getAverageSalaryByDept();
+		//testGetAllStockDetails();
+		//testFindStockUsingCode();
 		usingNative();
 
 
