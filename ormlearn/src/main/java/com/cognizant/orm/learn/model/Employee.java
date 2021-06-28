@@ -1,4 +1,4 @@
-package com.cognizant.ormlearnformapping.model;
+package com.cognizant.orm.learn.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
