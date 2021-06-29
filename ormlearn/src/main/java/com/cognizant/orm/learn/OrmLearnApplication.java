@@ -169,7 +169,7 @@ public class OrmLearnApplication {
 		
 		LOGGER.info("Start findStockUsingCode");
 		stockService.findStockUsingCode("GOOGLE").forEach(c -> LOGGER.info("{}", c));
-		LOGGER.info("END... for findStockUsingCode");
+		LOGGER.info("End for findStockUsingCode");
 	
 	}
 
@@ -180,7 +180,7 @@ public class OrmLearnApplication {
 				new SimpleDateFormat("yyyy-MM-dd").parse("2021-01-01"),
 				new SimpleDateFormat("yyyy-MM-dd").parse("2021-06-30"));
 		stockInSep19.forEach(c -> LOGGER.info("{}", c));
-		LOGGER.info("END... for findFBStockInSep19");
+		LOGGER.info("End findFBStockInSep19");
 		};
 	}
 	private static void usingNative(){
