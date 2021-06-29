@@ -4,6 +4,8 @@ import java.util.Date;
 import java.util.List;
 
 import javax.transaction.Transactional;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -18,7 +20,7 @@ import com.cognizant.orm.learn.service.StockService;
 public class StockServiceImpl implements StockService {
 
 
-  @Autowired
+        @Autowired
 	private StockRepository stockRepo;
 	
   
@@ -31,7 +33,7 @@ public class StockServiceImpl implements StockService {
   
 	@Override
 	public List<Stock> findStockUsingCode(String code) 
-	  {
+	{
 		return stockRepo.findStockByCode(code);
 	}
 
@@ -39,24 +41,24 @@ public class StockServiceImpl implements StockService {
 	@Override
 	public List<Stock> findFBStockInSep21(String code, Date startDate, Date endDate) 
 	{
-		return stockRepo.fbStockInSep121(code, startDate, endDate);
+		return stockRepo.fbStockInSep21(code, startDate, endDate);
 	}
 
 	@Override
-	public List<Stock> findGoogleStockGreaterThan1250(String code, double price) {
-
+	public List<Stock> findGoogleStockGreaterThan1250(String code, double price) 
+	{
 		return stockRepo.googleStocks(code, price);
 	}
 
 	@Override
-	public List<Stock> findTop3VolumeStock() {
-
+	public List<Stock> findTop3VolumeStock() 
+	{
 		return stockRepo.topVolume();
 	}
 
 	@Override
-	public List<Stock> findLowest3NetflixStocks(String code) {
-		
+	public List<Stock> findLowest3NetflixStocks(String code)
+	{	
 		return stockRepo.lowNetflixStocks(code);
 	}
 
