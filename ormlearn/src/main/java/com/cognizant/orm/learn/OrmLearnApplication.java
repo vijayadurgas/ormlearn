@@ -173,16 +173,40 @@ public class OrmLearnApplication {
 	
 	}
 
-	private static void testFindFBStockInSep19() {
+	private static void testFindFBStockInSep21() {
 		
-		LOGGER.info("Start findFBStockInSep19");
+		LOGGER.info("Start findFBStockInSep21");
 		List<Stock> stockInSep19 = stockService.findFBStockInSep19("FB",
 				new SimpleDateFormat("yyyy-MM-dd").parse("2021-01-01"),
 				new SimpleDateFormat("yyyy-MM-dd").parse("2021-06-30"));
 		stockInSep19.forEach(c -> LOGGER.info("{}", c));
-		LOGGER.info("End findFBStockInSep19");
-		};
+		LOGGER.info("End findFBStockInSep21");
+	
 	}
+	private static void testFindGoogleStockGreaterThan1250() {
+		
+		LOGGER.info("Start findGoogleStockGreaterThan1250");
+		stockService.findGoogleStockGreaterThan1250("GOOGLE", 1250).forEach(c -> LOGGER.info("{}", c));
+		LOGGER.info("End findGoogleStockGreaterThan1250");
+		
+	}
+
+	private static void testFindTop3VolumeStock() {
+	
+		LOGGER.info("Start findTop3VolumeStock");
+		stockService.findTop3VolumeStock().forEach(c -> LOGGER.info("{}", c));
+		LOGGER.info("End findTop3VolumeStock");
+
+	}
+
+	private static void testFindLowest3NetflixStocks() {
+
+		LOGGER.info("Start findLowest3NetflixStocks");
+		stockService.findLowest3NetflixStocks("NFLX").forEach(c ->LOGGER.info("{}", c));
+		LOGGER.info("End findLowest3NetflixStocks");
+		
+	}
+	
 	private static void usingNative(){
 		
 		LOGGER.info("Start usingNative");
@@ -217,7 +241,10 @@ public class OrmLearnApplication {
 		getAverageSalaryByDept();
 		testGetAllStockDetails();
 		testFindStockUsingCode();
-		testFindFBStockInSep19();
+		testFindFBStockInSep21();
+		testFindGoogleStockGreaterThan1250();
+		testFindTop3VolumeStock();
+		testFindLowest3NetflixStocks() ;
 		usingNative();
 
 
