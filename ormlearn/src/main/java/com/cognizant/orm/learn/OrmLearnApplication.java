@@ -169,7 +169,7 @@ public class OrmLearnApplication {
 		
 		LOGGER.info("Start findStockUsingCode");
 		stockService.findStockUsingCode("GOOGLE").forEach(c -> LOGGER.info("{}", c));
-		LOGGER.info("End for findStockUsingCode");
+		LOGGER.info("End findStockUsingCode");
 	
 	}
 
