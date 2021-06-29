@@ -207,17 +207,17 @@ public class OrmLearnApplication {
 		testUpdateCountry("SI", "SOUTH INDIA");
     		testFindCountry("SI");
 		testDeleteCountry("SI");
-		// testGetEmployee();
-		// testAddEmployee();
-		// testUpdateEmployee();
-		// testGetDepartment();
-		// testAddSkillToEmployee();
-		// getAllPermanent();
-		// getAverageSalary();
-		// getAverageSalaryByDept();
-		//testGetAllStockDetails();
-		//testFindStockUsingCode();
-		//testFindFBStockInSep19();
+		testGetEmployee();
+		testAddEmployee();
+		testUpdateEmployee();
+		testGetDepartment();
+		testAddSkillToEmployee();
+		getAllPermanent();
+		getAverageSalary();
+		getAverageSalaryByDept();
+		testGetAllStockDetails();
+		testFindStockUsingCode();
+		testFindFBStockInSep19();
 		usingNative();
 
 
